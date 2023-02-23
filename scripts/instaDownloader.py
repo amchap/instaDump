@@ -12,3 +12,4 @@ posts_sorted_by_likes = sorted(profile.get_posts(), key = lambda post: post.like
 
 for post in posts_sorted_by_likes:
     L.download_post(post, PROFILE)
+    filename = L.format_filename(post)

@@ -4,7 +4,7 @@ from itertools import dropwhile, takewhile
 import instaloader
 
 PROFILE = "demijmering"
-Name = "{filename}"
+Name = "{shortcode}"
 
 L = instaloader.Instaloader(filename_pattern=Name)
 

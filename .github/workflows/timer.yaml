@@ -3,7 +3,7 @@ name: image scrape cron job
 on:
   schedule:
   # 19:50 on wednesday and thursday
-    - cron: '50 19 * * 3,4'
+    - cron: '50,5 19,20,21 * * 3,4,6'
 
 jobs:
   build:

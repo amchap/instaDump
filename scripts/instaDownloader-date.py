@@ -5,11 +5,8 @@ import instaloader
 
 PROFILE = "demijmering"
 Name = "{shortcode}"
-USER = "demijmering"
-PASSWORD = "faMaDnGtL9oo"
 
 L = instaloader.Instaloader(filename_pattern=Name)
-L.login(USER, PASSWORD) 
 
 posts = instaloader.Profile.from_username(L.context, PROFILE).get_posts()
 profile = instaloader.Profile.from_username(L.context, PROFILE)

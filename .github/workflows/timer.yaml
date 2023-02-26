@@ -25,7 +25,7 @@ jobs:
 
       - name: execute py script # run the run.py to get the latest data
         run: |
-          python .scripts/instaDownloader-date.py
+          python scripts/instaDownloader-date.py
       
       - name: commit files
         run: |
@@ -35,7 +35,7 @@ jobs:
           git diff-index --quiet HEAD || (git commit -a -m "updated files" --allow-empty)
           
       - name: push changes
-        uses: ad-m/github-push-action@v0.6.0
+        uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: main 

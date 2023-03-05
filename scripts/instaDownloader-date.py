@@ -13,9 +13,8 @@ profile = instaloader.Profile.from_username(L.context, PROFILE)
 
 
 SINCE = datetime(2023, 12, 1)
-UNTIL = datetime(2023, 1, 1)
+UNTIL = datetime(2023, 2, 12)
 
 for post in takewhile(lambda p: p.date > UNTIL, dropwhile(lambda p: p.date > SINCE, posts)):
-    if not post.is_video:
-        L.download_post(post, PROFILE)
-        filename = profile.username + '/' + L.format_filename(post, target=profile.username)
+    L.download_post(post, PROFILE)
+    filename = profile.username + '/' + L.format_filename(post, target=profile.username)

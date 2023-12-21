@@ -12,7 +12,7 @@ posts = instaloader.Profile.from_username(L.context, PROFILE).get_posts()
 profile = instaloader.Profile.from_username(L.context, PROFILE)
 
 
-SINCE = datetime(2023, 12, 1)
+SINCE = datetime(2023, 12, 31)
 UNTIL = datetime(2023, 11, 15)
 
 for post in takewhile(lambda p: p.date > UNTIL, dropwhile(lambda p: p.date > SINCE, posts)):

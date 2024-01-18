@@ -12,8 +12,8 @@ posts = instaloader.Profile.from_username(L.context, PROFILE).get_posts()
 profile = instaloader.Profile.from_username(L.context, PROFILE)
 
 
-SINCE = datetime(2023, 12, 31)
-UNTIL = datetime(2023, 11, 15)
+SINCE = datetime(2024, 12, 31)
+UNTIL = datetime(2024, 1, 1)
 
 for post in takewhile(lambda p: p.date > UNTIL, dropwhile(lambda p: p.date > SINCE, posts)):
     L.download_post(post, PROFILE)
